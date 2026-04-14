@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | OYOclass Learning Story</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <nav class="navbar navbar-oyoclass navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">
+          <img src="https://oyoclass.com/static/images/oyoclass_logo.png" alt="OYOclass" style="height: 20px;">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/badges">BADGES</a></li>
+          <li><a href="/projects">PROJECTS</a></li>
+          <li><a href="/about">ABOUT</a></li>
+          <li><a href="https://oyoclass.com/user/64f75393220be6d07bec267f">KIDOYO</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-white">
+    <div class="container text-center">
+      <h1 class="section_title">About {{ data.name }}</h1>
+      <p class="lead">OYOclass Architect & Creative Developer</p>
+      <div class="narrative-box" style="max-width: 600px; margin: 40px auto; text-align: left;">
+        <p>This portfolio documents the self-directed learning journey of a student engaged in high-level computer
+          science, systems engineering, and creative design.</p>
+        <p>With expertise spanning from <span class="hl-blue">Python</span> and <span class="hl-blue">Java</span> to
+          physical computing with <span class="hl-orange">Arduino</span>, the goal is to build meaningful digital
+          artifacts that solve real problems.</p>
+      </div>
+      <a href="/" class="btn-oyo-primary">Back to Home</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <img src="https://oyoclass.com/static/images/oyoclass_logo.png" alt="OYOclass"
+        style="height:28px;margin-bottom:16px;opacity:0.7;">
+      <p>Generated from <a href="https://oyoclass.com">OYOclass.com</a> Profile &nbsp;·&nbsp; <strong
+          style="color:#555555;">{{ data.name }}</strong> &nbsp;·&nbsp; User ID: 64f75393220be6d07bec267f</p>
+      <p>Damon Portfolio &nbsp;·&nbsp; Build Leaders Community &nbsp;·&nbsp; Bellmore-Merrick Computer Science
+        &nbsp;·&nbsp; &copy; 2026 OYOclass.com</p>
+    </div>
+  </footer>
+</body>
+
+</html>
