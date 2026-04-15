@@ -23,6 +23,7 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">HOME</a></li>
           <li><a href="/badges">BADGES</a></li>
           <li class="active"><a href="/projects">PROJECTS</a></li>
           <li><a href="/about">ABOUT</a></li>
@@ -67,28 +68,8 @@
                 <a href="#all-projects" class="btn-carousel-ghost">See All Projects</a>
               </div>
               <div class="col-md-6 hidden-xs hidden-sm">
-                <div class="carousel-mockup">
-                  <div class="mockup-bar">
-                    <div class="mockup-dot red"></div>
-                    <div class="mockup-dot yellow"></div>
-                    <div class="mockup-dot green"></div>
-                    <span style="color:rgba(255,255,255,0.3);font-size:11px;margin-left:8px;">escape_room.hatch</span>
-                  </div>
-                  <div class="mockup-screen">
-                    <span class="ms-comment">// Escape Room · Room 3 of 5</span><br>
-                    <span class="ms-green">onStart</span>() {<br>
-                    &nbsp;&nbsp;<span class="ms-orange">timer</span>.start(<span class="ms-purple">300</span>);<br>
-                    &nbsp;&nbsp;<span class="ms-white">door</span>.lock();<br>
-                    &nbsp;&nbsp;<span class="ms-white">clue_1</span>.hide();<br>
-                    }<br><br>
-                    <span class="ms-green">onCollide</span>(key) {<br>
-                    &nbsp;&nbsp;<span class="ms-white">inventory</span>.add(<span
-                      class="ms-purple">"gold_key"</span>);<br>
-                    &nbsp;&nbsp;<span class="ms-white">door</span>.unlock();<br>
-                    &nbsp;&nbsp;<span class="ms-orange">broadcast</span>(<span
-                      class="ms-purple">"room_clear"</span>);<br>
-                    }<br>
-                  </div>
+                <div class="carousel-preview">
+                  <img src="https://picsum.photos/seed/escape-room/600/360" alt="Escape Room Adventure">
                 </div>
               </div>
             </div>
@@ -118,27 +99,8 @@
                 <a href="#all-projects" class="btn-carousel-ghost">See All Projects</a>
               </div>
               <div class="col-md-6 hidden-xs hidden-sm">
-                <div class="carousel-mockup">
-                  <div class="mockup-bar">
-                    <div class="mockup-dot red"></div>
-                    <div class="mockup-dot yellow"></div>
-                    <div class="mockup-dot green"></div>
-                    <span style="color:rgba(255,255,255,0.3);font-size:11px;margin-left:8px;">pixel_art.py</span>
-                  </div>
-                  <div class="mockup-screen">
-                    <span class="ms-comment"># Pixel Art Generator v2.0</span><br>
-                    <span class="ms-purple">import</span> <span class="ms-white">processing</span><br><br>
-                    <span class="ms-green">class</span> <span class="ms-orange">Canvas</span>:<br>
-                    &nbsp;&nbsp;<span class="ms-green">def</span> <span class="ms-white">draw_pixel</span>(self, x, y,
-                    color):<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ms-white">rect</span>(x*<span class="ms-purple">16</span>,
-                    y*<span class="ms-purple">16</span>, <span class="ms-purple">15</span>, <span
-                      class="ms-purple">15</span>)<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ms-white">fill</span>(color)<br><br>
-                    &nbsp;&nbsp;<span class="ms-green">def</span> <span class="ms-white">export</span>(self):<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ms-white">save</span>(<span
-                      class="ms-purple">"output.png"</span>)<br><br><br>
-                  </div>
+                <div class="carousel-preview">
+                  <img src="https://picsum.photos/seed/pixel-art/600/360" alt="Pixel Art Generator">
                 </div>
               </div>
             </div>
@@ -168,28 +130,8 @@
                 <a href="#all-projects" class="btn-carousel-ghost">See All Projects</a>
               </div>
               <div class="col-md-6 hidden-xs hidden-sm">
-                <div class="carousel-mockup">
-                  <div class="mockup-bar">
-                    <div class="mockup-dot red"></div>
-                    <div class="mockup-dot yellow"></div>
-                    <div class="mockup-dot green"></div>
-                    <span style="color:rgba(255,255,255,0.3);font-size:11px;margin-left:8px;">damon.oyosite.com</span>
-                  </div>
-                  <div class="mockup-screen">
-                    <span class="ms-comment">&lt;!-- Flask · Jinja2 Template --&gt;</span><br>
-                    <span class="ms-green">&lt;section</span> <span class="ms-orange">class</span>=<span
-                      class="ms-purple">"hero"</span><span class="ms-green">&gt;</span><br>
-                    &nbsp;&nbsp;<span class="ms-green">&lt;h1&gt;</span>{{ data.name }}<span
-                      class="ms-green">&lt;/h1&gt;</span><br>
-                    &nbsp;&nbsp;<span class="ms-green">&lt;p&gt;</span>{{ data.alias }}<span
-                      class="ms-green">&lt;/p&gt;</span><br>
-                    <span class="ms-green">&lt;/section&gt;</span><br><br>
-                    <span class="ms-comment"># app.py</span><br>
-                    <span class="ms-green">@app</span>.route(<span class="ms-purple">"/"</span>)<br>
-                    <span class="ms-green">def</span> <span class="ms-white">index</span>():<br>
-                    &nbsp;&nbsp;<span class="ms-white">return</span> render_template(<span
-                      class="ms-purple">"index.html"</span>)<br><br><br>
-                  </div>
+                <div class="carousel-preview">
+                  <img src="https://picsum.photos/seed/portfolio/600/360" alt="OYOclass Portfolio Site">
                 </div>
               </div>
             </div>
@@ -275,7 +217,7 @@
         <!-- ── HATCH! GAMES ── -->
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🐦</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/flappy-bird/400/160" alt="FlappyBird Clone"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">FlappyBird Clone</div>
@@ -294,7 +236,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🚀</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/space-shooter/400/160" alt="Space Shooter"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Space Shooter</div>
@@ -313,7 +255,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🗝️</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/escape-room-card/400/160" alt="Escape Room Adventure"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game · Featured</div>
               <div class="proj-name">Escape Room Adventure</div>
@@ -333,7 +275,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🐸</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/frogger/400/160" alt="Frogger"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Frogger</div>
@@ -352,7 +294,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🎯</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/simon-says/400/160" alt="Simon Says"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Simon Says</div>
@@ -371,7 +313,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">👾</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/among-us/400/160" alt="Among Us Clone"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Among Us Clone</div>
@@ -390,7 +332,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🏰</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/castle-defense/400/160" alt="Castle Defense"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Castle Defense</div>
@@ -409,7 +351,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🌀</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/maze-runner/400/160" alt="Maze Runner Pro"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Maze Runner Pro</div>
@@ -428,7 +370,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🎡</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/wheel-fortune/400/160" alt="Wheel of Fortune"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Wheel of Fortune</div>
@@ -447,7 +389,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🏓</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/pong-game/400/160" alt="Pong 2.0"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Pong 2.0</div>
@@ -466,7 +408,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">💣</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/breakout/400/160" alt="Breakout Deluxe"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Breakout Deluxe</div>
@@ -485,7 +427,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🏃</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/platformer/400/160" alt="Infinite Platformer"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Infinite Platformer</div>
@@ -504,7 +446,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🐍</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/snake-game/400/160" alt="Snake Remix"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Snake Remix</div>
@@ -523,7 +465,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🃏</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/memory-cards/400/160" alt="Memory Card Flip"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Memory Card Flip</div>
@@ -542,7 +484,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">⚽</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/soccer-kick/400/160" alt="Soccer Penalty Kick"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Soccer Penalty Kick</div>
@@ -561,7 +503,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🎪</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/carnival-shooter/400/160" alt="Carnival Shooter"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Carnival Shooter</div>
@@ -580,7 +522,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🌊</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/surfboard/400/160" alt="Surfboard Rush"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Surfboard Rush</div>
@@ -599,7 +541,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🤖</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/robot-factory/400/160" alt="Robot Factory"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Robot Factory</div>
@@ -618,7 +560,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🌋</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/volcano-jumper/400/160" alt="Volcano Jumper"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Volcano Jumper</div>
@@ -637,7 +579,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🧟</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/zombie-survival/400/160" alt="Zombie Survival"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Zombie Survival</div>
@@ -656,7 +598,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🎠</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/merry-go-round/400/160" alt="Merry-Go-Round Race"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Merry-Go-Round Race</div>
@@ -675,7 +617,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🍎</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/fruit-catcher/400/160" alt="Fruit Catcher"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Fruit Catcher</div>
@@ -694,7 +636,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🏹</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/archery-quest/400/160" alt="Archery Quest"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Archery Quest</div>
@@ -713,7 +655,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🎻</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/rhythm-tap/400/160" alt="Rhythm Tap Hero"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Rhythm Tap Hero</div>
@@ -732,7 +674,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🌌</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/asteroid-belt/400/160" alt="Asteroid Belt"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Asteroid Belt</div>
@@ -751,7 +693,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🦁</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/jungle-safari/400/160" alt="Jungle Safari"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Jungle Safari</div>
@@ -770,7 +712,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🎯</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/dart-board/400/160" alt="Dart Board Blitz"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Dart Board Blitz</div>
@@ -789,7 +731,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🎮</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/platformer-remix/400/160" alt="Platformer Remix"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Platformer Remix</div>
@@ -808,7 +750,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🐤</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/chicken-crossing/400/160" alt="Chicken Crossing"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Chicken Crossing</div>
@@ -827,7 +769,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🧊</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/ice-slide/400/160" alt="Ice Slide Puzzle"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Ice Slide Puzzle</div>
@@ -846,7 +788,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🎱</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/mini-golf/400/160" alt="Mini Golf Pro"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Mini Golf Pro</div>
@@ -865,7 +807,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🧲</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/magnet-maze/400/160" alt="Magnet Maze"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Magnet Maze</div>
@@ -884,7 +826,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🎪</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/juggler-pro/400/160" alt="Juggler Pro"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Juggler Pro</div>
@@ -903,7 +845,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🌿</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/garden-tycoon/400/160" alt="Garden Tycoon"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Garden Tycoon</div>
@@ -922,7 +864,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">⚡</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/lightning-strike/400/160" alt="Lightning Strike"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Lightning Strike</div>
@@ -941,7 +883,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🏔️</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/climbers-peak/400/160" alt="Climber's Peak"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Climber's Peak</div>
@@ -960,7 +902,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🎤</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/karaoke/400/160" alt="Karaoke Showdown"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Karaoke Showdown</div>
@@ -979,7 +921,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🔮</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/crystal-caves/400/160" alt="Crystal Caves"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Crystal Caves</div>
@@ -998,7 +940,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🚗</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/pixel-racer/400/160" alt="Pixel Racer"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Pixel Racer</div>
@@ -1017,7 +959,7 @@
 
         <div class="project-col" data-cat="hatch">
           <div class="proj-card">
-            <div class="proj-thumb cat-hatch">🏄</div>
+            <div class="proj-thumb cat-hatch"><img src="https://picsum.photos/seed/sky-diver/400/160" alt="Sky Diver"></div>
             <div class="proj-body">
               <div class="proj-type type-hatch">Hatch! Game</div>
               <div class="proj-name">Sky Diver</div>
@@ -1037,7 +979,7 @@
         <!-- ── PYTHON PROJECTS ── -->
         <div class="project-col" data-cat="python">
           <div class="proj-card">
-            <div class="proj-thumb cat-python">🐍</div>
+            <div class="proj-thumb cat-python"><img src="https://picsum.photos/seed/pixel-art-py/400/160" alt="Pixel Art Generator"></div>
             <div class="proj-body">
               <div class="proj-type type-python">Python Program</div>
               <div class="proj-name">Pixel Art Generator</div>
@@ -1057,7 +999,7 @@
 
         <div class="project-col" data-cat="python">
           <div class="proj-card">
-            <div class="proj-thumb cat-python">🔤</div>
+            <div class="proj-thumb cat-python"><img src="https://picsum.photos/seed/hangman/400/160" alt="Hangman Classic"></div>
             <div class="proj-body">
               <div class="proj-type type-python">Python Program</div>
               <div class="proj-name">Hangman Classic</div>
@@ -1076,7 +1018,7 @@
 
         <div class="project-col" data-cat="python">
           <div class="proj-card">
-            <div class="proj-thumb cat-python">⭕</div>
+            <div class="proj-thumb cat-python"><img src="https://picsum.photos/seed/tictactoe/400/160" alt="Tic Tac Toe AI"></div>
             <div class="proj-body">
               <div class="proj-type type-python">Python Program</div>
               <div class="proj-name">Tic Tac Toe AI</div>
@@ -1095,7 +1037,7 @@
 
         <div class="project-col" data-cat="python">
           <div class="proj-card">
-            <div class="proj-thumb cat-python">❓</div>
+            <div class="proj-thumb cat-python"><img src="https://picsum.photos/seed/trivia-quiz/400/160" alt="Trivia Quiz Engine"></div>
             <div class="proj-body">
               <div class="proj-type type-python">Python Program</div>
               <div class="proj-name">Trivia Quiz Engine</div>
@@ -1114,7 +1056,7 @@
 
         <div class="project-col" data-cat="python">
           <div class="proj-card">
-            <div class="proj-thumb cat-python">🗡️</div>
+            <div class="proj-thumb cat-python"><img src="https://picsum.photos/seed/text-rpg/400/160" alt="Text Adventure RPG"></div>
             <div class="proj-body">
               <div class="proj-type type-python">Python Program</div>
               <div class="proj-name">Text Adventure RPG</div>
@@ -1133,7 +1075,7 @@
 
         <div class="project-col" data-cat="python">
           <div class="proj-card">
-            <div class="proj-thumb cat-python">📊</div>
+            <div class="proj-thumb cat-python"><img src="https://picsum.photos/seed/sorting-viz/400/160" alt="Sorting Visualizer"></div>
             <div class="proj-body">
               <div class="proj-type type-python">Python Program</div>
               <div class="proj-name">Sorting Visualizer</div>
@@ -1153,7 +1095,7 @@
         <!-- ── WEB DEV ── -->
         <div class="project-col" data-cat="web">
           <div class="proj-card">
-            <div class="proj-thumb cat-web">🌐</div>
+            <div class="proj-thumb cat-web"><img src="https://picsum.photos/seed/portfolio-web/400/160" alt="OYOclass Portfolio Site"></div>
             <div class="proj-body">
               <div class="proj-type type-web">Web · Live Deploy · Featured</div>
               <div class="proj-name">OYOclass Portfolio Site</div>
@@ -1174,7 +1116,7 @@
         <!-- ── SPRITE ART ── -->
         <div class="project-col" data-cat="sprite">
           <div class="proj-card">
-            <div class="proj-thumb cat-sprite">🎨</div>
+            <div class="proj-thumb cat-sprite"><img src="https://picsum.photos/seed/space-explorer/400/160" alt="Space Explorer Sheet"></div>
             <div class="proj-body">
               <div class="proj-type type-sprite">Sprite Editor</div>
               <div class="proj-name">Space Explorer Sheet</div>
@@ -1193,7 +1135,7 @@
 
         <div class="project-col" data-cat="sprite">
           <div class="proj-card">
-            <div class="proj-thumb cat-sprite">🐉</div>
+            <div class="proj-thumb cat-sprite"><img src="https://picsum.photos/seed/dragon-art/400/160" alt="Dragon Pixel Art"></div>
             <div class="proj-body">
               <div class="proj-type type-sprite">Sprite Editor</div>
               <div class="proj-name">Dragon Pixel Art</div>
@@ -1212,7 +1154,7 @@
 
         <div class="project-col" data-cat="sprite">
           <div class="proj-card">
-            <div class="proj-thumb cat-sprite">🌆</div>
+            <div class="proj-thumb cat-sprite"><img src="https://picsum.photos/seed/neon-city/400/160" alt="Neon City Background"></div>
             <div class="proj-body">
               <div class="proj-type type-sprite">Sprite Editor</div>
               <div class="proj-name">Neon City Background</div>
@@ -1231,7 +1173,7 @@
 
         <div class="project-col" data-cat="sprite">
           <div class="proj-card">
-            <div class="proj-thumb cat-sprite">🤠</div>
+            <div class="proj-thumb cat-sprite"><img src="https://picsum.photos/seed/cowboy-pack/400/160" alt="Cowboy Character Pack"></div>
             <div class="proj-body">
               <div class="proj-type type-sprite">Sprite Editor</div>
               <div class="proj-name">Cowboy Character Pack</div>
@@ -1250,7 +1192,7 @@
 
         <div class="project-col" data-cat="sprite">
           <div class="proj-card">
-            <div class="proj-thumb cat-sprite">🌸</div>
+            <div class="proj-thumb cat-sprite"><img src="https://picsum.photos/seed/cherry-blossom/400/160" alt="Cherry Blossom Scene"></div>
             <div class="proj-body">
               <div class="proj-type type-sprite">Sprite Editor</div>
               <div class="proj-name">Cherry Blossom Scene</div>
@@ -1269,7 +1211,7 @@
 
         <div class="project-col" data-cat="sprite">
           <div class="proj-card">
-            <div class="proj-thumb cat-sprite">🏙️</div>
+            <div class="proj-thumb cat-sprite"><img src="https://picsum.photos/seed/arcade-cabinet/400/160" alt="OYO Arcade Cabinet"></div>
             <div class="proj-body">
               <div class="proj-type type-sprite">Sprite Editor</div>
               <div class="proj-name">OYO Arcade Cabinet</div>
@@ -1288,7 +1230,7 @@
 
         <div class="project-col" data-cat="sprite">
           <div class="proj-card">
-            <div class="proj-thumb cat-sprite">🦊</div>
+            <div class="proj-thumb cat-sprite"><img src="https://picsum.photos/seed/fox-mascot/400/160" alt="Fox Mascot Series"></div>
             <div class="proj-body">
               <div class="proj-type type-sprite">Sprite Editor</div>
               <div class="proj-name">Fox Mascot Series</div>
@@ -1307,7 +1249,7 @@
 
         <div class="project-col" data-cat="sprite">
           <div class="proj-card">
-            <div class="proj-thumb cat-sprite">🌊</div>
+            <div class="proj-thumb cat-sprite"><img src="https://picsum.photos/seed/ocean-tiles/400/160" alt="Ocean Tiles Pack"></div>
             <div class="proj-body">
               <div class="proj-type type-sprite">Sprite Editor</div>
               <div class="proj-name">Ocean Tiles Pack</div>
@@ -1326,7 +1268,7 @@
 
         <div class="project-col" data-cat="sprite">
           <div class="proj-card">
-            <div class="proj-thumb cat-sprite">🌌</div>
+            <div class="proj-thumb cat-sprite"><img src="https://picsum.photos/seed/starmap-qr/400/160" alt="Starmap QR Portrait"></div>
             <div class="proj-body">
               <div class="proj-type type-sprite">Sprite Editor</div>
               <div class="proj-name">Starmap QR Portrait</div>
@@ -1346,7 +1288,7 @@
         <!-- ── JAVA ── -->
         <div class="project-col" data-cat="java">
           <div class="proj-card">
-            <div class="proj-thumb cat-java">☕</div>
+            <div class="proj-thumb cat-java"><img src="https://picsum.photos/seed/bubble-sort/400/160" alt="Bubble Sort Visualizer"></div>
             <div class="proj-body">
               <div class="proj-type type-java">Java Program</div>
               <div class="proj-name">Bubble Sort Visualizer</div>
@@ -1365,7 +1307,7 @@
 
         <div class="project-col" data-cat="java">
           <div class="proj-card">
-            <div class="proj-thumb cat-java">🏦</div>
+            <div class="proj-thumb cat-java"><img src="https://picsum.photos/seed/bank-account/400/160" alt="Bank Account OOP"></div>
             <div class="proj-body">
               <div class="proj-type type-java">Java Program</div>
               <div class="proj-name">Bank Account OOP</div>
@@ -1385,7 +1327,7 @@
         <!-- ── C++ ── -->
         <div class="project-col" data-cat="cpp">
           <div class="proj-card">
-            <div class="proj-thumb cat-cpp">⚙️</div>
+            <div class="proj-thumb cat-cpp"><img src="https://picsum.photos/seed/dungeon-cpp/400/160" alt="Text-Based Dungeon"></div>
             <div class="proj-body">
               <div class="proj-type type-cpp">C++ Program</div>
               <div class="proj-name">Text-Based Dungeon</div>
@@ -1404,7 +1346,7 @@
 
         <div class="project-col" data-cat="cpp">
           <div class="proj-card">
-            <div class="proj-thumb cat-cpp">🧮</div>
+            <div class="proj-thumb cat-cpp"><img src="https://picsum.photos/seed/matrix-calc/400/160" alt="Matrix Calculator"></div>
             <div class="proj-body">
               <div class="proj-type type-cpp">C++ Program</div>
               <div class="proj-name">Matrix Calculator</div>
