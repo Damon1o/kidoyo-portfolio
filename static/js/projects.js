@@ -52,6 +52,26 @@ document.getElementById('searchClear').addEventListener('click', function () {
     applyFilters();
 });
 
+// Hero search bar — syncs to #projectSearch, applies filters, scrolls to grid
+function heroSearch() {
+    var heroInput = document.getElementById('heroSearch');
+    var projInput = document.getElementById('projectSearch');
+    var grid = document.getElementById('all-projects');
+    if (!heroInput || !projInput || !grid) { return; }
+    projInput.value = heroInput.value;
+    applyFilters();
+    grid.scrollIntoView({ behavior: 'smooth' });
+}
+
+var heroSearchBtn = document.getElementById('heroSearchBtn');
+var heroSearchInput = document.getElementById('heroSearch');
+if (heroSearchBtn) { heroSearchBtn.addEventListener('click', heroSearch); }
+if (heroSearchInput) {
+    heroSearchInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') { heroSearch(); }
+    });
+}
+
 // Animate cards on load
 document.querySelectorAll('.proj-card').forEach(function (card, i) {
     card.style.animationDelay = (i * 30) + 'ms';
