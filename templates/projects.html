@@ -67,28 +67,9 @@
                 <a href="#all-projects" class="btn-carousel-ghost">See All Projects</a>
               </div>
               <div class="col-md-6 hidden-xs hidden-sm">
-                <div class="carousel-mockup">
-                  <div class="mockup-bar">
-                    <div class="mockup-dot red"></div>
-                    <div class="mockup-dot yellow"></div>
-                    <div class="mockup-dot green"></div>
-                    <span style="color:rgba(255,255,255,0.3);font-size:11px;margin-left:8px;">escape_room.hatch</span>
-                  </div>
-                  <div class="mockup-screen">
-                    <span class="ms-comment">// Escape Room · Room 3 of 5</span><br>
-                    <span class="ms-green">onStart</span>() {<br>
-                    &nbsp;&nbsp;<span class="ms-orange">timer</span>.start(<span class="ms-purple">300</span>);<br>
-                    &nbsp;&nbsp;<span class="ms-white">door</span>.lock();<br>
-                    &nbsp;&nbsp;<span class="ms-white">clue_1</span>.hide();<br>
-                    }<br><br>
-                    <span class="ms-green">onCollide</span>(key) {<br>
-                    &nbsp;&nbsp;<span class="ms-white">inventory</span>.add(<span
-                      class="ms-purple">"gold_key"</span>);<br>
-                    &nbsp;&nbsp;<span class="ms-white">door</span>.unlock();<br>
-                    &nbsp;&nbsp;<span class="ms-orange">broadcast</span>(<span
-                      class="ms-purple">"room_clear"</span>);<br>
-                    }<br>
-                  </div>
+                <div class="carousel-preview">
+                  <img src="{{ url_for('static', filename='images/projects/slide1.png') }}"
+                    alt="Escape Room Adventure screenshot" class="carousel-preview-img">
                 </div>
               </div>
             </div>
@@ -118,27 +99,9 @@
                 <a href="#all-projects" class="btn-carousel-ghost">See All Projects</a>
               </div>
               <div class="col-md-6 hidden-xs hidden-sm">
-                <div class="carousel-mockup">
-                  <div class="mockup-bar">
-                    <div class="mockup-dot red"></div>
-                    <div class="mockup-dot yellow"></div>
-                    <div class="mockup-dot green"></div>
-                    <span style="color:rgba(255,255,255,0.3);font-size:11px;margin-left:8px;">pixel_art.py</span>
-                  </div>
-                  <div class="mockup-screen">
-                    <span class="ms-comment"># Pixel Art Generator v2.0</span><br>
-                    <span class="ms-purple">import</span> <span class="ms-white">processing</span><br><br>
-                    <span class="ms-green">class</span> <span class="ms-orange">Canvas</span>:<br>
-                    &nbsp;&nbsp;<span class="ms-green">def</span> <span class="ms-white">draw_pixel</span>(self, x, y,
-                    color):<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ms-white">rect</span>(x*<span class="ms-purple">16</span>,
-                    y*<span class="ms-purple">16</span>, <span class="ms-purple">15</span>, <span
-                      class="ms-purple">15</span>)<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ms-white">fill</span>(color)<br><br>
-                    &nbsp;&nbsp;<span class="ms-green">def</span> <span class="ms-white">export</span>(self):<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ms-white">save</span>(<span
-                      class="ms-purple">"output.png"</span>)<br><br><br>
-                  </div>
+                <div class="carousel-preview">
+                  <img src="{{ url_for('static', filename='images/projects/slide2.png') }}"
+                    alt="Pixel Art Generator screenshot" class="carousel-preview-img">
                 </div>
               </div>
             </div>
@@ -168,28 +131,9 @@
                 <a href="#all-projects" class="btn-carousel-ghost">See All Projects</a>
               </div>
               <div class="col-md-6 hidden-xs hidden-sm">
-                <div class="carousel-mockup">
-                  <div class="mockup-bar">
-                    <div class="mockup-dot red"></div>
-                    <div class="mockup-dot yellow"></div>
-                    <div class="mockup-dot green"></div>
-                    <span style="color:rgba(255,255,255,0.3);font-size:11px;margin-left:8px;">damon.oyosite.com</span>
-                  </div>
-                  <div class="mockup-screen">
-                    <span class="ms-comment">&lt;!-- Flask · Jinja2 Template --&gt;</span><br>
-                    <span class="ms-green">&lt;section</span> <span class="ms-orange">class</span>=<span
-                      class="ms-purple">"hero"</span><span class="ms-green">&gt;</span><br>
-                    &nbsp;&nbsp;<span class="ms-green">&lt;h1&gt;</span>{{ data.name }}<span
-                      class="ms-green">&lt;/h1&gt;</span><br>
-                    &nbsp;&nbsp;<span class="ms-green">&lt;p&gt;</span>{{ data.alias }}<span
-                      class="ms-green">&lt;/p&gt;</span><br>
-                    <span class="ms-green">&lt;/section&gt;</span><br><br>
-                    <span class="ms-comment"># app.py</span><br>
-                    <span class="ms-green">@app</span>.route(<span class="ms-purple">"/"</span>)<br>
-                    <span class="ms-green">def</span> <span class="ms-white">index</span>():<br>
-                    &nbsp;&nbsp;<span class="ms-white">return</span> render_template(<span
-                      class="ms-purple">"index.html"</span>)<br><br><br>
-                  </div>
+                <div class="carousel-preview">
+                  <img src="{{ url_for('static', filename='images/projects/slide3.png') }}"
+                    alt="OYOclass Portfolio Site screenshot" class="carousel-preview-img">
                 </div>
               </div>
             </div>
@@ -204,18 +148,6 @@
       <a class="right carousel-control" href="#projectCarousel" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right"></span>
       </a>
-    </div>
-
-    <!-- HERO SEARCH -->
-    <div class="hero-search-wrap">
-      <div class="container">
-        <div class="hero-search-inner">
-          <span class="hero-search-icon"><i class="fa fa-search"></i></span>
-          <input type="text" id="heroSearch" class="hero-search-input"
-            placeholder="Search all 54 projects — name, type, tag…" autocomplete="off">
-          <button class="hero-search-btn" id="heroSearchBtn">Search</button>
-        </div>
-      </div>
     </div>
   </section>
 

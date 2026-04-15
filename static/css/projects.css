@@ -172,70 +172,21 @@ body {
     text-decoration: none;
 }
 
-/* Mockup panel */
-.carousel-mockup {
-    background: #1a2a3a;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+/* Carousel preview image */
+.carousel-preview {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
     max-width: 420px;
     margin-left: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.mockup-bar {
-    background: #0f1e2e;
-    padding: 10px 14px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.mockup-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-}
-
-.mockup-dot.red {
-    background: #ef4444;
-}
-
-.mockup-dot.yellow {
-    background: #f59e0b;
-}
-
-.mockup-dot.green {
-    background: #10b981;
-}
-
-.mockup-screen {
-    padding: 28px;
-    font-family: 'Courier New', monospace;
-    font-size: 13px;
-    color: #7dd3fc;
-    line-height: 1.8;
-    min-height: 220px;
-}
-
-.mockup-screen .ms-green {
-    color: #86efac;
-}
-
-.mockup-screen .ms-orange {
-    color: #fdba74;
-}
-
-.mockup-screen .ms-purple {
-    color: #c4b5fd;
-}
-
-.mockup-screen .ms-white {
-    color: #e2e8f0;
-}
-
-.mockup-screen .ms-comment {
-    color: #475569;
+.carousel-preview-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 /* Carousel controls */
@@ -259,62 +210,6 @@ body {
 
 .carousel-indicators .active {
     background-color: #1088cf;
-}
-
-/* ── HERO SEARCH ── */
-.hero-search-wrap {
-    padding: 24px 0 32px;
-    position: relative;
-    z-index: 2;
-}
-
-.hero-search-inner {
-    position: relative;
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 6px;
-    backdrop-filter: blur(6px);
-    overflow: hidden;
-}
-
-.hero-search-icon {
-    padding: 0 14px 0 18px;
-    color: rgba(255, 255, 255, 0.45);
-    font-size: 14px;
-    flex-shrink: 0;
-}
-
-.hero-search-input {
-    flex: 1;
-    background: transparent;
-    border: none;
-    outline: none;
-    padding: 14px 0;
-    font-size: 14px;
-    color: #ffffff;
-    min-width: 0;
-}
-
-.hero-search-input::placeholder {
-    color: rgba(255, 255, 255, 0.4);
-}
-
-.hero-search-btn {
-    flex-shrink: 0;
-    background: #1088cf;
-    border: none;
-    color: #fff;
-    font-size: 13px;
-    font-weight: 700;
-    padding: 14px 28px;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.hero-search-btn:hover {
-    background: #0d72b0;
 }
 
 /* ── STAT BAR ── */
