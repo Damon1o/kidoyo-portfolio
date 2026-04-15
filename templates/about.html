@@ -22,27 +22,29 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/badges">BADGES</a></li>
           <li><a href="/projects">PROJECTS</a></li>
-          <li><a href="/about">ABOUT</a></li>
+          <li class="active"><a href="/about">ABOUT</a></li>
           <li><a href="https://oyoclass.com/user/64f75393220be6d07bec267f">KIDOYO</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <section class="section-white">
-    <div class="container text-center">
-      <h1 class="section_title">About {{ data.name }}</h1>
-      <p class="lead">OYOclass Architect & Creative Developer</p>
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-eyebrow">Profile</p>
+      <h1 class="page-hero-title">{{ data.name }}</h1>
+      <p class="page-hero-sub">OYOclass Architect &amp; Creative Developer</p>
     </div>
   </section>
 
   <section class="section-blue">
     <div class="container">
       <p class="section-eyebrow">Profile Overview</p>
-      <h2 class="section_title">Who Is Mentor Ferrara?</h2>
+      <h2 class="section_title">Who Is {{ data.name }}?</h2>
+      <p class="section-lead">A look at the learning journey, achievements, and skills behind the OYOclass profile.</p>
       <div class="narrative-box">
         <p>
-          <span class="hl-blue">Mentor Ferrara</span> represents one of OYOclass's most prolific and deeply engaged
+          <span class="hl-blue">{{ data.name }}</span> represents one of OYOclass's most prolific and deeply engaged
           educator-learner hybrid profiles. With a verified <span class="hl-orange">OYO Pro Passport</span>, this
           account holder operates simultaneously as a certified mentor, classroom teacher, and active learner —
           accumulating <span class="hl-blue">415 micro-badges</span> and <span class="hl-blue">37 mastery badges</span>
@@ -75,6 +77,8 @@
         &nbsp;·&nbsp; &copy; 2026 OYOclass.com</p>
     </div>
   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 
 </html>

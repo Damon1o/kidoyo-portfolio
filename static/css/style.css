@@ -52,8 +52,9 @@ body {
 }
 
 .navbar-oyoclass .navbar-nav>li.active>a {
-  color: #3498db;
+  color: #1088cf;
   background: transparent;
+  border-bottom: 3px solid #1088cf;
 }
 
 /* ── HERO ── */
@@ -134,7 +135,7 @@ body {
   font-size: 32px;
   font-weight: 700;
   color: #000000;
-  margin: 0 0 32px;
+  margin: 0 0 8px;
   line-height: 1.2;
 }
 
@@ -159,7 +160,8 @@ body {
 }
 
 .stat-card:hover {
-  transform: scale(1.04);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 }
 
 .stat-card .stat-icon {
@@ -196,7 +198,8 @@ body {
 }
 
 .app-card:hover {
-  transform: scale(1.04);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 }
 
 .app-card .app-icon {
@@ -290,7 +293,8 @@ body {
 }
 
 .pack-card:hover {
-  transform: scale(1.04);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 }
 
 .pack-card .pack-title {
@@ -383,7 +387,8 @@ body {
 }
 
 .timeline-item:hover {
-  transform: scale(1.02);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-item::before {
@@ -476,7 +481,8 @@ body {
 }
 
 .comm-tag:hover {
-  transform: scale(1.04);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .comm-tag.active {
@@ -506,7 +512,8 @@ body {
 }
 
 .portfolio-mini:hover {
-  transform: scale(1.04);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-mini .port-icon {
@@ -630,6 +637,195 @@ body {
   border: none;
   border-top: 1px solid rgba(0, 0, 0, 0.07);
   margin: 0;
+}
+
+/* ── BADGE CARDS (Achievements page) ── */
+#achievements {
+  background-color: #f4f8fc;
+  padding: 64px 0;
+}
+
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .badge-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .badge-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.dl2-badge-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.dl2-badge-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-color: rgba(16, 136, 207, 0.2);
+}
+
+.badge-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.badge-icon-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge-text-content {
+  flex: 1;
+}
+
+.badge-card-title {
+  font-weight: 700;
+  font-size: 14px;
+  color: #1a1a1a;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.badge-card-sub {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  color: #1088cf;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-check {
+  margin-right: 4px;
+  font-size: 13px;
+}
+
+.section-header-badges {
+  margin-bottom: 40px;
+}
+
+.section-header-badges h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.section-header-badges p {
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ── PAGE HERO (dark header for inner pages) ── */
+.page-hero {
+  background: #0d1b2a;
+  position: relative;
+  overflow: hidden;
+  padding: 72px 0 64px;
+  text-align: center;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(16, 136, 207, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse at 75% 20%, rgba(39, 174, 96, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.page-hero .section-eyebrow {
+  position: relative;
+  color: #1088cf;
+}
+
+.page-hero-title {
+  position: relative;
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 12px;
+  line-height: 1.15;
+}
+
+.page-hero-sub {
+  position: relative;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ── SECTION LEAD ── */
+.section-lead {
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+/* ── FEATURED STRIP ── */
+.featured-strip {
+  background: linear-gradient(135deg, #0d1b2a 0%, #1088cf 100%);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.featured-strip h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px;
+}
+
+.featured-strip p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14px;
+  margin: 0 0 20px;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stat-card,
+.pack-card,
+.timeline-item,
+.app-card {
+  animation: fadeUp 0.4s ease both;
 }
 
 /* ── RESPONSIVE ── */

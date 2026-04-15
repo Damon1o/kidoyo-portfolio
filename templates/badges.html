@@ -8,110 +8,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  <style>
-    /* DL2 Style Badge Cards - Local Override */
-    #achievements {
-      background-color: #f4f8fc !important;
-      /* Light blue background like student story */
-      padding: 64px 0;
-    }
-
-    .badge-grid {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      gap: 16px;
-    }
-
-    @media (min-width: 768px) {
-      .badge-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .badge-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .dl2-badge-card {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding: 16px;
-      background-color: #ffffff;
-      /* White container as requested */
-      border-radius: 12px;
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      transition: all 0.2s ease-in-out;
-    }
-
-    .dl2-badge-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-      border-color: rgba(16, 136, 207, 0.2);
-    }
-
-    .badge-icon-wrap {
-      width: 52px;
-      height: 52px;
-      border-radius: 10px;
-      overflow: hidden;
-      flex-shrink: 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .badge-icon-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .badge-text-content {
-      flex: 1;
-    }
-
-    .badge-card-title {
-      font-weight: 700;
-      font-size: 14px;
-      color: #1a1a1a;
-      margin: 0 0 4px 0;
-      line-height: 1.3;
-    }
-
-    .badge-card-sub {
-      display: flex;
-      align-items: center;
-      font-size: 11px;
-      color: #1088cf;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .badge-check {
-      margin-right: 4px;
-      font-size: 13px;
-    }
-
-    .section-header-badges {
-      margin-bottom: 40px;
-    }
-
-    .section-header-badges h2 {
-      font-size: 28px;
-      font-weight: 700;
-      color: #1a1a1a;
-      margin-bottom: 8px;
-    }
-
-    .section-header-badges p {
-      color: #64748b;
-      font-size: 15px;
-      line-height: 1.6;
-    }
-  </style>
 </head>
 
 <body>
@@ -124,7 +20,7 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="/badges">BADGES</a></li>
+          <li class="active"><a href="/badges">BADGES</a></li>
           <li><a href="/projects">PROJECTS</a></li>
           <li><a href="/about">ABOUT</a></li>
           <li><a href="https://oyoclass.com/user/64f75393220be6d07bec267f">KIDOYO</a></li>
@@ -133,11 +29,20 @@
     </div>
   </nav>
 
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-eyebrow">Credentials</p>
+      <h1 class="page-hero-title">Mastery Badges</h1>
+      <p class="page-hero-sub">Full learning pathways, verified by mentors and earned through code.</p>
+    </div>
+  </section>
+
   <section id="achievements">
     <div class="container">
       <div class="section-header-badges">
-        <h2>Mastery Badges — Proof of Learning</h2>
-        <p>
+        <p class="section-eyebrow">Proof of Learning</p>
+        <h2 class="section_title">All Earned Badges</h2>
+        <p class="section-lead">
           Mastery Badges are awarded only when an entire learning pathway is successfully
           completed and verified by a mentor. These credentials represent the deepest,
           most rigorously assessed achievements on the profile.
@@ -478,6 +383,8 @@
         &nbsp;·&nbsp; &copy; 2026 OYOclass.com</p>
     </div>
   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 
 </html>
