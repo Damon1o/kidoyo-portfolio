@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | OYOclass Learning Story</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+</head>
+
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="navbar navbar-oyoclass navbar-static-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">
+          <img src="https://oyoclass.com/static/images/oyoclass_logo.png" alt="OYOclass">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/badges">BADGES</a></li>
+          <li class="active"><a href="/projects">PROJECTS</a></li>
+          <li><a href="/about">ABOUT</a></li>
+          <li><a href="https://oyoclass.com/user/64f75393220be6d07bec267f">KIDOYO</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════
+       CAROUSEL HERO
+  ══════════════════════════════════════════════ -->
+  <section class="carousel-hero">
+    <div id="projectCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+
+      <!-- Indicators -->
+      <ol class="carousel-indicators" style="bottom: 20px;">
+        <li data-target="#projectCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#projectCarousel" data-slide-to="1"></li>
+        <li data-target="#projectCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <div class="carousel-inner">
+
+        <div class="item active">
+          <div class="container">
+            <div class="carousel-slide-inner">
+              <div class="col-md-6" style="padding-left:0;">
+                <div class="carousel-badge"><i class="fa fa-gamepad" style="margin-right:6px;"></i>Hatch! Game Engine
+                </div>
+                <h2>Escape Room<br>Adventure</h2>
+                <p>A multi-level puzzle game built entirely in Hatch! featuring custom sprite art, timed events,
+                  inventory logic, and hidden clue sequences across 5 unique rooms.</p>
+                <div class="carousel-tags">
+                  <span class="carousel-tag">🧩 Hatch! Level 3</span>
+                  <span class="carousel-tag">🎭 Event Broadcasting</span>
+                  <span class="carousel-tag">🗝️ Inventory System</span>
+                  <span class="carousel-tag">⏱️ Timer Logic</span>
+                </div>
+                <a href="#" class="btn-carousel-primary"><i class="fa fa-play" style="margin-right:6px;"></i>Play
+                  Now</a>
+                <a href="#all-projects" class="btn-carousel-ghost">See All Projects</a>
+              </div>
+              <div class="col-md-6 hidden-xs hidden-sm">
+                <div class="carousel-mockup">
+                  <div class="mockup-bar">
+                    <div class="mockup-dot red"></div>
+                    <div class="mockup-dot yellow"></div>
+                    <div class="mockup-dot green"></div>
+                    <span style="color:rgba(255,255,255,0.3);font-size:11px;margin-left:8px;">escape_room.hatch</span>
+                  </div>
+                  <div class="mockup-screen">
+                    <span class="ms-comment">// Escape Room · Room 3 of 5</span><br>
+                    <span class="ms-green">onStart</span>() {<br>
+                    &nbsp;&nbsp;<span class="ms-orange">timer</span>.start(<span class="ms-purple">300</span>);<br>
+                    &nbsp;&nbsp;<span class="ms-white">door</span>.lock();<br>
+                    &nbsp;&nbsp;<span class="ms-white">clue_1</span>.hide();<br>
+                    }<br><br>
+                    <span class="ms-green">onCollide</span>(key) {<br>
+                    &nbsp;&nbsp;<span class="ms-white">inventory</span>.add(<span
+                      class="ms-purple">"gold_key"</span>);<br>
+                    &nbsp;&nbsp;<span class="ms-white">door</span>.unlock();<br>
+                    &nbsp;&nbsp;<span class="ms-orange">broadcast</span>(<span
+                      class="ms-purple">"room_clear"</span>);<br>
+                    }<br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 2 — Pixel Art Generator -->
+        <div class="item">
+          <div class="container">
+            <div class="carousel-slide-inner">
+              <div class="col-md-6" style="padding-left:0;">
+                <div class="carousel-badge"
+                  style="color:#27ae60;background:rgba(39,174,96,0.15);border-color:rgba(39,174,96,0.3);"><i
+                    class="fa fa-code" style="margin-right:6px;"></i>Python Program</div>
+                <h2>Pixel Art<br>Generator</h2>
+                <p>A terminal-based Python program using the Processing library to render custom pixel grids from color
+                  arrays — with real-time redraw, palette switching, and export functions.</p>
+                <div class="carousel-tags">
+                  <span class="carousel-tag">🐍 Python OOP</span>
+                  <span class="carousel-tag">🎨 Processing Lib</span>
+                  <span class="carousel-tag">📤 Export PNG</span>
+                  <span class="carousel-tag">🖱️ Mouse Events</span>
+                </div>
+                <a href="#" class="btn-carousel-primary"
+                  style="background:#27ae60;box-shadow:0 2px 12px rgba(39,174,96,0.35);"><i class="fa fa-terminal"
+                    style="margin-right:6px;"></i>View Code</a>
+                <a href="#all-projects" class="btn-carousel-ghost">See All Projects</a>
+              </div>
+              <div class="col-md-6 hidden-xs hidden-sm">
+                <div class="carousel-mockup">
+                  <div class="mockup-bar">
+                    <div class="mockup-dot red"></div>
+                    <div class="mockup-dot yellow"></div>
+                    <div class="mockup-dot green"></div>
+                    <span style="color:rgba(255,255,255,0.3);font-size:11px;margin-left:8px;">pixel_art.py</span>
+                  </div>
+                  <div class="mockup-screen">
+                    <span class="ms-comment"># Pixel Art Generator v2.0</span><br>
+                    <span class="ms-purple">import</span> <span class="ms-white">processing</span><br><br>
+                    <span class="ms-green">class</span> <span class="ms-orange">Canvas</span>:<br>
+                    &nbsp;&nbsp;<span class="ms-green">def</span> <span class="ms-white">draw_pixel</span>(self, x, y,
+                    color):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ms-white">rect</span>(x*<span class="ms-purple">16</span>,
+                    y*<span class="ms-purple">16</span>, <span class="ms-purple">15</span>, <span
+                      class="ms-purple">15</span>)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ms-white">fill</span>(color)<br><br>
+                    &nbsp;&nbsp;<span class="ms-green">def</span> <span class="ms-white">export</span>(self):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="ms-white">save</span>(<span
+                      class="ms-purple">"output.png"</span>)<br><br><br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 3 — Portfolio Website -->
+        <div class="item">
+          <div class="container">
+            <div class="carousel-slide-inner">
+              <div class="col-md-6" style="padding-left:0;">
+                <div class="carousel-badge"
+                  style="color:#e67e22;background:rgba(230,126,34,0.15);border-color:rgba(230,126,34,0.3);"><i
+                    class="fa fa-globe" style="margin-right:6px;"></i>Live Web Deployment</div>
+                <h2>OYOclass<br>Portfolio Site</h2>
+                <p>A fully responsive, multi-page personal portfolio built with Flask, Bootstrap, and custom CSS —
+                  deployed live with mobile-first design, dynamic routing, and real user data from the OYOclass API.</p>
+                <div class="carousel-tags">
+                  <span class="carousel-tag">🌐 Flask</span>
+                  <span class="carousel-tag">📱 Mobile Responsive</span>
+                  <span class="carousel-tag">🔋 Live Deploy</span>
+                  <span class="carousel-tag">🔗 REST API</span>
+                </div>
+                <a href="#" class="btn-carousel-primary"
+                  style="background:#e67e22;box-shadow:0 2px 12px rgba(230,126,34,0.35);"><i class="fa fa-external-link"
+                    style="margin-right:6px;"></i>Visit Site</a>
+                <a href="#all-projects" class="btn-carousel-ghost">See All Projects</a>
+              </div>
+              <div class="col-md-6 hidden-xs hidden-sm">
+                <div class="carousel-mockup">
+                  <div class="mockup-bar">
+                    <div class="mockup-dot red"></div>
+                    <div class="mockup-dot yellow"></div>
+                    <div class="mockup-dot green"></div>
+                    <span style="color:rgba(255,255,255,0.3);font-size:11px;margin-left:8px;">damon.oyosite.com</span>
+                  </div>
+                  <div class="mockup-screen">
+                    <span class="ms-comment">&lt;!-- Flask · Jinja2 Template --&gt;</span><br>
+                    <span class="ms-green">&lt;section</span> <span class="ms-orange">class</span>=<span
+                      class="ms-purple">"hero"</span><span class="ms-green">&gt;</span><br>
+                    &nbsp;&nbsp;<span class="ms-green">&lt;h1&gt;</span>{{ data.name }}<span
+                      class="ms-green">&lt;/h1&gt;</span><br>
+                    &nbsp;&nbsp;<span class="ms-green">&lt;p&gt;</span>{{ data.alias }}<span
+                      class="ms-green">&lt;/p&gt;</span><br>
+                    <span class="ms-green">&lt;/section&gt;</span><br><br>
+                    <span class="ms-comment"># app.py</span><br>
+                    <span class="ms-green">@app</span>.route(<span class="ms-purple">"/"</span>)<br>
+                    <span class="ms-green">def</span> <span class="ms-white">index</span>():<br>
+                    &nbsp;&nbsp;<span class="ms-white">return</span> render_template(<span
+                      class="ms-purple">"index.html"</span>)<br><br><br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.carousel-inner -->
+
+      <a class="left carousel-control" href="#projectCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#projectCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── STAT BAR ── -->
+  <section class="stat-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-4 col-sm-2 stat-bar-item">
+          <div class="stat-bar-num" style="color:#1088cf;">54</div>
+          <div class="stat-bar-label">Total Projects</div>
+        </div>
+        <div class="col-xs-4 col-sm-2 stat-bar-item stat-bar-divider">
+          <div class="stat-bar-num">39</div>
+          <div class="stat-bar-label">Hatch! Games</div>
+        </div>
+        <div class="col-xs-4 col-sm-2 stat-bar-item stat-bar-divider">
+          <div class="stat-bar-num">6</div>
+          <div class="stat-bar-label">Python Apps</div>
+        </div>
+        <div class="col-xs-4 col-sm-2 stat-bar-item stat-bar-divider">
+          <div class="stat-bar-num">1</div>
+          <div class="stat-bar-label">Live Websites</div>
+        </div>
+        <div class="col-xs-4 col-sm-2 stat-bar-item stat-bar-divider">
+          <div class="stat-bar-num">9</div>
+          <div class="stat-bar-label">Sprite Artworks</div>
+        </div>
+        <div class="col-xs-4 col-sm-2 stat-bar-item stat-bar-divider">
+          <div class="stat-bar-num">0</div>
+          <div class="stat-bar-label">Other Languages</div>
+        </div>
+        <!--        <div class="col-xs-4 col-sm-2 stat-bar-item stat-bar-divider">
+          <div class="stat-bar-num" style="color:#e67e22;">4</div>
+          <div class="stat-bar-label">Hackathon Wins</div>
+        </div>-->
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       ALL PROJECTS GRID
+  ══════════════════════════════════════════════ -->
+  <section class="section-white" id="all-projects">
+    <div class="container">
+
+      <div class="section-eyebrow">Proof of Work</div>
+      <h2 class="section_title">Full Project Portfolio</h2>
+      <p class="section-lead">Every artifact, game, and program built on OYOclass — organized by skill domain. Click any
+        category to filter.</p>
+
+      <!-- FILTER TABS -->
+      <div class="filter-tabs" id="filterTabs">
+        <button class="filter-tab active" data-filter="all">All Projects <span class="tab-count"
+            id="count-all">54</span></button>
+        <button class="filter-tab" data-filter="hatch" style="">Hatch! Games <span class="tab-count"
+            id="count-hatch">39</span></button>
+        <button class="filter-tab" data-filter="python">Python <span class="tab-count"
+            id="count-python">6</span></button>
+        <button class="filter-tab" data-filter="web">Web Dev <span class="tab-count" id="count-web">1</span></button>
+        <button class="filter-tab" data-filter="sprite">Sprite Art <span class="tab-count"
+            id="count-sprite">9</span></button>
+        <button class="filter-tab" data-filter="java">Java <span class="tab-count" id="count-java">2</span></button>
+        <button class="filter-tab" data-filter="cpp">C++ <span class="tab-count" id="count-cpp">2</span></button>
+      </div>
+
+      <!-- PROJECT GRID -->
+      <div class="project-grid" id="projectGrid">
+
+        <!-- ── HATCH! GAMES ── -->
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🐦</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">FlappyBird Clone</div>
+              <div class="proj-desc">Classic infinite-scrolling flap mechanics with pipe generation, gravity physics,
+                and a high-score system built entirely in Hatch!</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Physics</span>
+                <span class="proj-pill">Cloning</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🚀</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Space Shooter</div>
+              <div class="proj-desc">Multi-wave alien shooter with progressive difficulty scaling, laser bullets, shield
+                power-ups, and an animated starfield background.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Broadcasting</span>
+                <span class="proj-pill">Waves</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🗝️</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game · Featured</div>
+              <div class="proj-name">Escape Room Adventure</div>
+              <div class="proj-desc">5-room puzzle escape game with inventory logic, timed sequences, hidden clues, and
+                branching outcomes. Hackathon submission finalist.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Inventory</span>
+                <span class="proj-pill">Timers</span>
+                <span class="proj-pill">Featured</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🐸</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Frogger</div>
+              <div class="proj-desc">Faithful Frogger recreation with randomized traffic, log-hopping water sections,
+                and 3-life system across 4 difficulty levels.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Collision</span>
+                <span class="proj-pill">Motion</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🎯</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Simon Says</div>
+              <div class="proj-desc">Color-sequence memory game with audio feedback, increasing pattern length per
+                round, and a live combo counter display.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Audio</span>
+                <span class="proj-pill">Sequences</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">👾</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Among Us Clone</div>
+              <div class="proj-desc">Top-down social deduction minigame with task completion, sabotage mechanics, and an
+                impostor detection voting screen.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Top-Down</span>
+                <span class="proj-pill">UI</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🏰</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Castle Defense</div>
+              <div class="proj-desc">Tower defense game where the player places archers to stop waves of invaders.
+                Custom enemy pathfinding using waypoints and clones.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Pathfinding</span>
+                <span class="proj-pill">Cloning</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🌀</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Maze Runner Pro</div>
+              <div class="proj-desc">Procedurally designed maze with 5 levels, wall collision detection, sprint boost
+                mechanic, and a par-time leaderboard.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Mazes</span>
+                <span class="proj-pill">5-Star</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🎡</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Wheel of Fortune</div>
+              <div class="proj-desc">Interactive word-guessing show replica with a spinning prize wheel, letter reveal
+                animations, and a 3-player hot-seat mode.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Rotation</span>
+                <span class="proj-pill">UI Logic</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🏓</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Pong 2.0</div>
+              <div class="proj-desc">Two-player Pong with speed ramp, AI opponent mode, and a retro CRT scanline visual
+                filter applied via overlay sprites.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">2-Player</span>
+                <span class="proj-pill">AI Mode</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">💣</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Breakout Deluxe</div>
+              <div class="proj-desc">Brick-breaking game with 6 power-up types (multi-ball, laser, freeze),
+                indestructible bricks, and an unlockable bonus stage.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Power-Ups</span>
+                <span class="proj-pill">Physics</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🏃</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Infinite Platformer</div>
+              <div class="proj-desc">Side-scrolling endless runner with procedural platform generation, coin collecting,
+                double-jump mechanic, and a combo multiplier.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Procedural</span>
+                <span class="proj-pill">Cloning</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🐍</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Snake Remix</div>
+              <div class="proj-desc">Classic Snake with custom skins, a shrinking arena mode, and special apple types
+                that add bonuses or reverse controls.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Grid Logic</span>
+                <span class="proj-pill">Lists</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🃏</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Memory Card Flip</div>
+              <div class="proj-desc">Concentration-style card matching game with animated flip transitions, difficulty
+                scaling from 4×4 to 6×6, and a star rating.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Animation</span>
+                <span class="proj-pill">State</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">⚽</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Soccer Penalty Kick</div>
+              <div class="proj-desc">Penalty shootout minigame with aiming trajectory preview, goalkeeper AI that reads
+                mouse movement, and a 5-round tournament mode.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Trajectory</span>
+                <span class="proj-pill">AI</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🎪</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Carnival Shooter</div>
+              <div class="proj-desc">Target gallery game with moving duck targets, balloon popping physics, and a
+                ticket-redemption score system.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Targeting</span>
+                <span class="proj-pill">Physics</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🌊</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Surfboard Rush</div>
+              <div class="proj-desc">Endless wave-riding game with obstacle dodging, trick-combo system, and gradient
+                ocean background built with layered sprites.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Endless</span>
+                <span class="proj-pill">Combos</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🤖</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Robot Factory</div>
+              <div class="proj-desc">Puzzle game where players assemble robots on a conveyor belt by matching part types
+                against a blueprint — built for Code Conquest 2025.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Puzzle</span>
+                <span class="proj-pill">CC 2025</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🌋</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Volcano Jumper</div>
+              <div class="proj-desc">Precision platformer set on erupting volcanoes with lava-rise mechanic, checkpoint
+                flags, and unlockable character skins.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Precision</span>
+                <span class="proj-pill">Checkpoints</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🧟</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Zombie Survival</div>
+              <div class="proj-desc">Top-down survival shooter with directional aim, wave spawning, weapon drops, and a
+                safe-zone shrinking mechanic.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Spawning</span>
+                <span class="proj-pill">Weapons</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🎠</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Merry-Go-Round Race</div>
+              <div class="proj-desc">Circular racing game where characters orbit a central axis and dodge outward-flung
+                obstacles at increasing RPM.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Rotation Math</span>
+                <span class="proj-pill">Orbit</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🍎</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Fruit Catcher</div>
+              <div class="proj-desc">Fast-paced catching game with falling fruit types worth varying points — includes
+                rotten fruit to dodge and a combo multiplier.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Catching</span>
+                <span class="proj-pill">Randomize</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🏹</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Archery Quest</div>
+              <div class="proj-desc">Physics-based archery with wind simulation, moving targets, and a distance-scoring
+                challenge mode across 5 ranges.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Projectile</span>
+                <span class="proj-pill">Wind</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🎻</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Rhythm Tap Hero</div>
+              <div class="proj-desc">Music rhythm game where falling note sprites sync to a beat track and the player
+                taps lane keys for a perfect-combo score.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Rhythm</span>
+                <span class="proj-pill">Sync</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🌌</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Asteroid Belt</div>
+              <div class="proj-desc">Dodge-and-collect space game with asteroid fragmentation, fuel mechanics, and 360°
+                rotational ship movement.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">360° Move</span>
+                <span class="proj-pill">Fragments</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🦁</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Jungle Safari</div>
+              <div class="proj-desc">Side-scroller where the player photographs animals hiding in layered parallax
+                jungle backgrounds for a star rating per shot.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Parallax</span>
+                <span class="proj-pill">Scoring</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🎯</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Dart Board Blitz</div>
+              <div class="proj-desc">Rapid-fire dart throwing game with wind drift, moving boards, and a 9-dart perfect
+                challenge mode.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Aim</span>
+                <span class="proj-pill">Drift</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🎮</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Platformer Remix</div>
+              <div class="proj-desc">Level-editor platformer where the player can paint tiles and set enemy paths — then
+                share a level code for others to play.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Level Editor</span>
+                <span class="proj-pill">Share</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🐤</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Chicken Crossing</div>
+              <div class="proj-desc">Frogger variant with comedic chicken sprites, log-riding river segments, and a
+                secret shortcut hidden on level 3.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Variant</span>
+                <span class="proj-pill">Sprites</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🧊</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Ice Slide Puzzle</div>
+              <div class="proj-desc">Sokoban-style puzzle where the player slides ice blocks onto colored targets — 20
+                handcrafted levels with undo functionality.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Sokoban</span>
+                <span class="proj-pill">Undo</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🎱</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Mini Golf Pro</div>
+              <div class="proj-desc">9-hole mini golf with power-meter aiming, surface friction simulation, and water
+                hazards that subtract from the scorecard.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Power Meter</span>
+                <span class="proj-pill">Friction</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🧲</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Magnet Maze</div>
+              <div class="proj-desc">Puzzle game using magnetic attraction and repulsion forces to guide a metal ball to
+                an exit without touching electrified walls.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Magnets</span>
+                <span class="proj-pill">Physics</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🎪</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Juggler Pro</div>
+              <div class="proj-desc">Arcade juggling simulator where the player controls hand paddles to keep multiple
+                balls airborne — each new level adds another ball.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Multi-Ball</span>
+                <span class="proj-pill">Scaling</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🌿</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Garden Tycoon</div>
+              <div class="proj-desc">Idle growth simulation where the player plants seeds, earns sunlight currency, and
+                upgrades crop speed and soil quality.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Idle</span>
+                <span class="proj-pill">Upgrades</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">⚡</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Lightning Strike</div>
+              <div class="proj-desc">Reflex game where the player taps a key on a lightning strike before it resets —
+                60-second challenge with reaction-time leaderboard.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Reflex</span>
+                <span class="proj-pill">Timer</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🏔️</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Climber's Peak</div>
+              <div class="proj-desc">Vertical platformer where the player climbs an infinite mountain — wind gusts, ice
+                patches, and eagle dive-bombs increase over altitude.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Vertical</span>
+                <span class="proj-pill">Endless</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🎤</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Karaoke Showdown</div>
+              <div class="proj-desc">Rhythm scoring game with lyric-scroll UI, crowd energy bar, and bonus notes scored
+                by tap timing accuracy.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Rhythm</span>
+                <span class="proj-pill">Crowd AI</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🔮</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Crystal Caves</div>
+              <div class="proj-desc">Atmospheric exploration platformer with hidden crystal fragments, glowing particle
+                effects, and a map system tracking discovery progress.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Exploration</span>
+                <span class="proj-pill">Particles</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🚗</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Pixel Racer</div>
+              <div class="proj-desc">Top-down racing game with AI opponents using waypoint navigation, slipstream boost
+                zone, and 3 unlockable tracks.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Waypoints</span>
+                <span class="proj-pill">AI Race</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="hatch">
+          <div class="proj-card">
+            <div class="proj-thumb cat-hatch">🏄</div>
+            <div class="proj-body">
+              <div class="proj-type type-hatch">Hatch! Game</div>
+              <div class="proj-name">Sky Diver</div>
+              <div class="proj-desc">Falling skydiver game where the player steers through cloud rings and avoids birds
+                before deploying a parachute at the target zone.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Steering</span>
+                <span class="proj-pill">Targets</span>
+              </div>
+              <a href="#" class="proj-link">Play →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PYTHON PROJECTS ── -->
+        <div class="project-col" data-cat="python">
+          <div class="proj-card">
+            <div class="proj-thumb cat-python">🐍</div>
+            <div class="proj-body">
+              <div class="proj-type type-python">Python Program</div>
+              <div class="proj-name">Pixel Art Generator</div>
+              <div class="proj-desc">Processing-library canvas app that renders custom pixel grids from color arrays
+                with real-time redraw and PNG export. Featured project.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Processing</span>
+                <span class="proj-pill">OOP</span>
+                <span class="proj-pill">Export</span>
+              </div>
+              <a href="#" class="proj-link">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="python">
+          <div class="proj-card">
+            <div class="proj-thumb cat-python">🔤</div>
+            <div class="proj-body">
+              <div class="proj-type type-python">Python Program</div>
+              <div class="proj-name">Hangman Classic</div>
+              <div class="proj-desc">Terminal-based word guessing game with a categorized word bank (animals, countries,
+                tech), progressive hint unlocks, and ASCII art gallows.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Lists</span>
+                <span class="proj-pill">ASCII Art</span>
+              </div>
+              <a href="#" class="proj-link">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="python">
+          <div class="proj-card">
+            <div class="proj-thumb cat-python">⭕</div>
+            <div class="proj-body">
+              <div class="proj-type type-python">Python Program</div>
+              <div class="proj-name">Tic Tac Toe AI</div>
+              <div class="proj-desc">Two-mode Tic Tac Toe with a minimax AI opponent (unbeatable difficulty) and a local
+                2-player hot-seat mode with a score tracker.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Minimax</span>
+                <span class="proj-pill">AI</span>
+              </div>
+              <a href="#" class="proj-link">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="python">
+          <div class="proj-card">
+            <div class="proj-thumb cat-python">❓</div>
+            <div class="proj-body">
+              <div class="proj-type type-python">Python Program</div>
+              <div class="proj-name">Trivia Quiz Engine</div>
+              <div class="proj-desc">Multi-category quiz generator reading from a JSON question bank, with timed rounds,
+                answer shuffling, and a final performance report.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">JSON</span>
+                <span class="proj-pill">Timed</span>
+              </div>
+              <a href="#" class="proj-link">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="python">
+          <div class="proj-card">
+            <div class="proj-thumb cat-python">🗡️</div>
+            <div class="proj-body">
+              <div class="proj-type type-python">Python Program</div>
+              <div class="proj-name">Text Adventure RPG</div>
+              <div class="proj-desc">Branching narrative game engine with inventory, stat checks, and save-state
+                functionality built using Python classes and JSON files.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Classes</span>
+                <span class="proj-pill">Save State</span>
+              </div>
+              <a href="#" class="proj-link">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="python">
+          <div class="proj-card">
+            <div class="proj-thumb cat-python">📊</div>
+            <div class="proj-body">
+              <div class="proj-type type-python">Python Program</div>
+              <div class="proj-name">Sorting Visualizer</div>
+              <div class="proj-desc">Visual comparison of Bubble, Selection, Merge, and Quick sort algorithms rendered
+                step-by-step with color-coded bar heights using Turtle.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Algorithms</span>
+                <span class="proj-pill">Turtle</span>
+              </div>
+              <a href="#" class="proj-link">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── WEB DEV ── -->
+        <div class="project-col" data-cat="web">
+          <div class="proj-card">
+            <div class="proj-thumb cat-web">🌐</div>
+            <div class="proj-body">
+              <div class="proj-type type-web">Web · Live Deploy · Featured</div>
+              <div class="proj-name">OYOclass Portfolio Site</div>
+              <div class="proj-desc">Fully responsive multi-page Flask app with custom CSS, Bootstrap 3, Jinja2
+                templates, dynamic routing, and a radar chart rendered in SVG. Deployed live.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Flask</span>
+                <span class="proj-pill">Bootstrap</span>
+                <span class="proj-pill">Deployed</span>
+              </div>
+              <a href="https://oyoclass.com/user/64f75393220be6d07bec267f" class="proj-link">Visit →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SPRITE ART ── -->
+        <div class="project-col" data-cat="sprite">
+          <div class="proj-card">
+            <div class="proj-thumb cat-sprite">🎨</div>
+            <div class="proj-body">
+              <div class="proj-type type-sprite">Sprite Editor</div>
+              <div class="proj-name">Space Explorer Sheet</div>
+              <div class="proj-desc">Full 8-frame walk cycle sprite sheet for an astronaut character — designed for use
+                in Hatch! Space Shooter and Asteroid Belt.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Animation</span>
+                <span class="proj-pill">8-Frame</span>
+              </div>
+              <a href="#" class="proj-link">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="sprite">
+          <div class="proj-card">
+            <div class="proj-thumb cat-sprite">🐉</div>
+            <div class="proj-body">
+              <div class="proj-type type-sprite">Sprite Editor</div>
+              <div class="proj-name">Dragon Pixel Art</div>
+              <div class="proj-desc">32×32 detailed dragon character with idle, fire-breath, and death animation frames
+                — 3-star Color by Code inspired design.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">CBC ★★★</span>
+                <span class="proj-pill">Animation</span>
+              </div>
+              <a href="#" class="proj-link">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="sprite">
+          <div class="proj-card">
+            <div class="proj-thumb cat-sprite">🌆</div>
+            <div class="proj-body">
+              <div class="proj-type type-sprite">Sprite Editor</div>
+              <div class="proj-name">Neon City Background</div>
+              <div class="proj-desc">Layered pixel-art parallax cityscape with neon signage, rain streaks, and
+                reflections — used as Zombie Survival's environment.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Parallax</span>
+                <span class="proj-pill">Background</span>
+              </div>
+              <a href="#" class="proj-link">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="sprite">
+          <div class="proj-card">
+            <div class="proj-thumb cat-sprite">🤠</div>
+            <div class="proj-body">
+              <div class="proj-type type-sprite">Sprite Editor</div>
+              <div class="proj-name">Cowboy Character Pack</div>
+              <div class="proj-desc">Complete cowboy character set: idle, run, jump, and shoot poses in a consistent
+                16×16 palette for a Wild West Hatch! game jam.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Character</span>
+                <span class="proj-pill">Pack</span>
+              </div>
+              <a href="#" class="proj-link">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="sprite">
+          <div class="proj-card">
+            <div class="proj-thumb cat-sprite">🌸</div>
+            <div class="proj-body">
+              <div class="proj-type type-sprite">Sprite Editor</div>
+              <div class="proj-name">Cherry Blossom Scene</div>
+              <div class="proj-desc">Decorative still-life pixel artwork of a Japanese garden — submitted for the
+                OYOclass Sprite Editor certification showcase.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Still Life</span>
+                <span class="proj-pill">Certified</span>
+              </div>
+              <a href="#" class="proj-link">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="sprite">
+          <div class="proj-card">
+            <div class="proj-thumb cat-sprite">🏙️</div>
+            <div class="proj-body">
+              <div class="proj-type type-sprite">Sprite Editor</div>
+              <div class="proj-name">OYO Arcade Cabinet</div>
+              <div class="proj-desc">Detailed pixel-art arcade cabinet design with glowing screen, coin slot, and
+                joystick — created for the OYO Arcade web micro-badge.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Detail</span>
+                <span class="proj-pill">Micro-Badge</span>
+              </div>
+              <a href="#" class="proj-link">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="sprite">
+          <div class="proj-card">
+            <div class="proj-thumb cat-sprite">🦊</div>
+            <div class="proj-body">
+              <div class="proj-type type-sprite">Sprite Editor</div>
+              <div class="proj-name">Fox Mascot Series</div>
+              <div class="proj-desc">5-expression emoji fox mascot set (happy, sad, angry, surprised, thinking) created
+                for the Build Leaders community branding project.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Mascot</span>
+                <span class="proj-pill">Series</span>
+              </div>
+              <a href="#" class="proj-link">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="sprite">
+          <div class="proj-card">
+            <div class="proj-thumb cat-sprite">🌊</div>
+            <div class="proj-body">
+              <div class="proj-type type-sprite">Sprite Editor</div>
+              <div class="proj-name">Ocean Tiles Pack</div>
+              <div class="proj-desc">16-tile seamless ocean tileset with wave animations, foam edges, and deep water
+                variants — reused across 3 Hatch! aquatic games.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Tileset</span>
+                <span class="proj-pill">Seamless</span>
+              </div>
+              <a href="#" class="proj-link">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="sprite">
+          <div class="proj-card">
+            <div class="proj-thumb cat-sprite">🌌</div>
+            <div class="proj-body">
+              <div class="proj-type type-sprite">Sprite Editor</div>
+              <div class="proj-name">Starmap QR Portrait</div>
+              <div class="proj-desc">Pixel-art portrait encoded as a functional QR code linking to the OYOclass profile
+                — earned the Sprite Editor QR Code badge.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">QR Badge</span>
+                <span class="proj-pill">Portrait</span>
+              </div>
+              <a href="#" class="proj-link">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── JAVA ── -->
+        <div class="project-col" data-cat="java">
+          <div class="proj-card">
+            <div class="proj-thumb cat-java">☕</div>
+            <div class="proj-body">
+              <div class="proj-type type-java">Java Program</div>
+              <div class="proj-name">Bubble Sort Visualizer</div>
+              <div class="proj-desc">Swing-based GUI that animates Bubble Sort step-by-step with speed control slider
+                and a comparison-count tracker.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Swing GUI</span>
+                <span class="proj-pill">Algorithms</span>
+              </div>
+              <a href="#" class="proj-link">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="java">
+          <div class="proj-card">
+            <div class="proj-thumb cat-java">🏦</div>
+            <div class="proj-body">
+              <div class="proj-type type-java">Java Program</div>
+              <div class="proj-name">Bank Account OOP</div>
+              <div class="proj-desc">Object-oriented banking simulation with inheritance (Checking, Savings, Premium),
+                overdraft logic, and a transaction history log.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Inheritance</span>
+                <span class="proj-pill">OOP</span>
+              </div>
+              <a href="#" class="proj-link">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── C++ ── -->
+        <div class="project-col" data-cat="cpp">
+          <div class="proj-card">
+            <div class="proj-thumb cat-cpp">⚙️</div>
+            <div class="proj-body">
+              <div class="proj-type type-cpp">C++ Program</div>
+              <div class="proj-name">Text-Based Dungeon</div>
+              <div class="proj-desc">Console dungeon crawler with room-map generation, combat loop, inventory pointers,
+                and enemy struct definitions using raw C++ arrays.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Pointers</span>
+                <span class="proj-pill">Structs</span>
+              </div>
+              <a href="#" class="proj-link">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-col" data-cat="cpp">
+          <div class="proj-card">
+            <div class="proj-thumb cat-cpp">🧮</div>
+            <div class="proj-body">
+              <div class="proj-type type-cpp">C++ Program</div>
+              <div class="proj-name">Matrix Calculator</div>
+              <div class="proj-desc">Terminal matrix operations tool supporting addition, multiplication, transpose, and
+                determinant calculation with error handling for invalid sizes.</div>
+            </div>
+            <div class="proj-footer">
+              <div class="proj-pills">
+                <span class="proj-pill">Math</span>
+                <span class="proj-pill">Templates</span>
+              </div>
+              <a href="#" class="proj-link">View →</a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.project-grid -->
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <img src="https://oyoclass.com/static/images/oyoclass_logo.png" alt="OYOclass"
+        style="height:28px;margin-bottom:16px;opacity:0.7;">
+      <p>Generated from <a href="https://oyoclass.com">OYOclass.com</a> Profile &nbsp;·&nbsp; <strong
+          style="color:#555555;">Damon Lin</strong> &nbsp;·&nbsp; User ID: 64f75393220be6d07bec267f</p>
+      <p>Damon Portfolio &nbsp;·&nbsp; Build Leaders Community &nbsp;·&nbsp; Bellmore-Merrick Computer Science
+        &nbsp;·&nbsp; &copy; 2026 OYOclass.com</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="{{ url_for('static', filename='js/projects.js') }}"></script>
+
+</body>
+
+</html>

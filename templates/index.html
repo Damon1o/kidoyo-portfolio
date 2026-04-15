@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ data.name }} | OYOclass Learning Story</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-oyoclass navbar-static-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img src="https://oyoclass.com/static/images/oyoclass_logo.png" alt="OYOclass" style="height: 17px;">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/badges">BADGES</a></li>
+          <li><a href="/projects">PROJECTS</a></li>
+          <li><a href="/about">ABOUT</a></li>
+          <li><a href="https://oyoclass.com/user/64f75393220be6d07bec267f">KIDOYO</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-avatar">
+        <img
+          src="https://oyoclass.s3.amazonaws.com/portrait/account/0bde70a092144044aacbad8bab54bf76-64f75393220be6d07bec267f"
+          alt="{{ data.name }}">
+      </div>
+      <p class="hero-sub">OYOclass Architect</p>
+      <h1 class="hero-headline">{{ data.name }}</h1>
+      <p class="hero-alias">Alias: {{ data.alias }} · Active since 2024</p>
+      <div class="hero-pro-tag">
+        <i class="fa fa-star" style="margin-right:4px;"></i> KidOYO Root: Owner
+      </div>
+      <div class="hero-pro-tag">
+        <i class="fa fa-gamepad" style="margin-right:4px;"></i> GameJam Winner
+      </div>
+      <div class="hero-pro-tag">
+        <i class="fa fa-trophy" style="margin-right:4px;"></i> Hackathon Finalist
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats" class="section-white">
+    <div class="container">
+      <p class="section-eyebrow">Proof of Work</p>
+      <h2 class="section_title">The Numbers</h2>
+      <div class="row">
+        <div class="col-sm-4 col-md-2">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa fa-medal"></i></div>
+            <div class="stat-num">{{ data.glance_stats.mastery_badges }}</div>
+            <div class="stat-label">Mastery Badges<br>Earned</div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-2">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa fa-bolt"></i></div>
+            <div class="stat-num">{{ data.glance_stats.micro_badges }}</div>
+            <div class="stat-label">Micro Badges<br>Collected</div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-2">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa fa-code"></i></div>
+            <div class="stat-num">{{ data.skills|length }}</div>
+            <div class="stat-label">Programming<br>Languages</div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-2">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa fa-rocket"></i></div>
+            <div class="stat-num">{{ data.glance_stats.projects }}</div>
+            <div class="stat-label">Projects<br>Deployed</div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-2">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa fa-trophy"></i></div>
+            <div class="stat-num">{{ data.glance_stats.hackathon_wins }}</div>
+            <div class="stat-label">Hackathon<br>Wins</div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-2">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa fa-calendar"></i></div>
+            <div class="stat-num" style="font-size: 22px; padding: 6px 0;">{{ data.glance_stats.years_active }}</div>
+            <div class="stat-label">Years of<br>Growth</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MASTERY -->
+  <section id="mastery" class="section-blue">
+    <div class="container">
+      <p class="section-eyebrow">Credentials</p>
+      <h2 class="section_title">Achievements</h2>
+      <div class="row">
+        {% for pack in data.mastery_packs %}
+        <div class="col-md-6">
+          <div class="pack-card">
+            <div class="pack-type" style="color: {{ pack.color }};">{{ pack.type }}</div>
+            <h3 class="pack-title">{{ pack.title }}</h3>
+            <p class="pack-desc">{{ pack.desc }}</p>
+            <div class="badge-chip-row">
+              {% for chip in pack.chips %}
+              <span class="badge-chip">{{ chip }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS/RADAR -->
+  <section id="skills" class="section-white">
+    <div class="container">
+      <p class="section-eyebrow">Competency Map</p>
+      <h2 class="section_title">Technical Domains</h2>
+
+      <div class="radar-wrap">
+        <div class="radar-svg-box">
+          <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg"
+            style="width:100%;max-width:260px;display:block;margin:0 auto;">
+            <polygon points="120,40 180,80 180,160 120,200 60,160 60,80" fill="none" stroke="rgba(0,0,0,0.07)"
+              stroke-width="1" />
+            <polygon points="120,60 165,88 165,152 120,180 75,152 75,88" fill="none" stroke="rgba(0,0,0,0.07)"
+              stroke-width="1" />
+            <polygon points="120,80 150,96 150,144 120,160 90,144 90,96" fill="none" stroke="rgba(0,0,0,0.07)"
+              stroke-width="1" />
+            <polygon points="120,100 135,104 135,136 120,140 105,136 105,104" fill="none" stroke="rgba(0,0,0,0.07)"
+              stroke-width="1" />
+            <line x1="120" y1="120" x2="120" y2="40" stroke="rgba(0,0,0,0.1)" stroke-width="1" />
+            <line x1="120" y1="120" x2="180" y2="80" stroke="rgba(0,0,0,0.1)" stroke-width="1" />
+            <line x1="120" y1="120" x2="180" y2="160" stroke="rgba(0,0,0,0.1)" stroke-width="1" />
+            <line x1="120" y1="120" x2="120" y2="200" stroke="rgba(0,0,0,0.1)" stroke-width="1" />
+            <line x1="120" y1="120" x2="60" y2="160" stroke="rgba(0,0,0,0.1)" stroke-width="1" />
+            <line x1="120" y1="120" x2="60" y2="80" stroke="rgba(0,0,0,0.1)" stroke-width="1" />
+            <polygon points="{{ data.radar_points }}" fill="rgba(16,136,207,0.15)" stroke="#1088cf" stroke-width="2" />
+            {% for c in data.radar_circles %}
+            <circle cx="{{ c.x }}" cy="{{ c.y }}" r="5" fill="{{ c.color }}" />
+            {% endfor %}
+            <text x="120" y="30" text-anchor="middle" fill="#555555" font-size="9" font-weight="700">Python</text>
+            <text x="192" y="80" text-anchor="start" fill="#555555" font-size="9" font-weight="700">Hatch!</text>
+            <text x="186" y="165" text-anchor="start" fill="#555555" font-size="9" font-weight="700">Web Dev</text>
+            <text x="120" y="218" text-anchor="middle" fill="#555555" font-size="9" font-weight="700">Java</text>
+            <text x="8" y="165" text-anchor="start" fill="#555555" font-size="9" font-weight="700">Java</text>
+            <text x="8" y="80" text-anchor="start" fill="#555555" font-size="9" font-weight="700">Sprite Art</text>
+          </svg>
+        </div>
+        <div class="radar-legend">
+          <div class="comm-group-label">Language Skillsets</div>
+          <div class="row">
+            {% for skill in data.skills %}
+            <div class="col-sm-6">
+              <div class="skill-bar-wrap">
+                <div class="skill-bar-label">
+                  <span>{{ skill.name }}</span>
+                  <span style="color: {{ skill.color }}; font-weight: 700;">{{ skill.percentage }}%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="width: {{ skill.percentage }}%; background: {{ skill.color }};">
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section id="journey" class="section-blue">
+    <div class="container">
+      <p class="section-eyebrow">The Timeline</p>
+      <h2 class="section_title">Learning Journey</h2>
+      <div class="timeline-wrap">
+        <div class="timeline-item">
+          <div class="timeline-year">2024 — START</div>
+          <div class="timeline-event">Hackathons & Web Dev</div>
+          <p class="timeline-detail">Started my coding journey with OYOclass. Completed Web Design Fundamentals Mastery
+            for live deployment. Competed for the first time in the Code Conquest JR championships.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2025 — EXPAND</div>
+          <div class="timeline-event">Python & Java Mastery</div>
+          <p class="timeline-detail">Completed Python and Java Mastery programs. Competed in the Code Conquest
+            Hackathon and placed 2nd.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2026 — CONTINUE</div>
+          <div class="timeline-event">AI & Neural Networks</div>
+          <p class="timeline-detail">Currently enrolled in AI and Neural Networks courses. Planning to compete in the
+            Code Conquest championships.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <img src="https://oyoclass.com/static/images/oyoclass_logo.png" alt="OYOclass"
+        style="height:28px;margin-bottom:16px;opacity:0.7;">
+      <p>Generated from <a href="https://oyoclass.com">OYOclass.com</a> Profile &nbsp;·&nbsp; <strong
+          style="color:#555555;">{{ data.name }}</strong> &nbsp;·&nbsp; User ID: 64f75393220be6d07bec267f</p>
+      <p>Damon Portfolio &nbsp;·&nbsp; Build Leaders Community &nbsp;·&nbsp; Bellmore-Merrick Computer Science
+        &nbsp;·&nbsp; &copy; 2026 OYOclass.com</p>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
