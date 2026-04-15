@@ -52,8 +52,9 @@ body {
 }
 
 .navbar-oyoclass .navbar-nav>li.active>a {
-  color: #3498db;
+  color: #1088cf;
   background: transparent;
+  border-bottom: 3px solid #1088cf;
 }
 
 /* ── HERO ── */
@@ -600,6 +601,68 @@ body {
 .site-footer a {
   color: #1088cf;
   font-weight: 700;
+}
+
+/* ── PAGE HERO (inner pages) ── */
+.page-hero {
+  background: #0d1b2a;
+  position: relative;
+  overflow: hidden;
+  padding: 64px 0 56px;
+  text-align: center;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(16, 136, 207, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 20%, rgba(39, 174, 96, 0.10) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #1088cf;
+  background: rgba(16, 136, 207, 0.15);
+  border: 1px solid rgba(16, 136, 207, 0.3);
+  border-radius: 20px;
+  padding: 4px 14px;
+  margin-bottom: 18px;
+}
+
+.page-hero-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 14px;
+  line-height: 1.15;
+}
+
+.page-hero-sub {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  margin: 0 auto;
+  max-width: 520px;
+}
+
+/* ── SECTION LEAD ── */
+.section-lead {
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.7;
+  margin-bottom: 36px;
 }
 
 /* ── CTA BUTTON ── */

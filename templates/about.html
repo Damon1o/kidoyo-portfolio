@@ -22,17 +22,19 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/badges">BADGES</a></li>
           <li><a href="/projects">PROJECTS</a></li>
-          <li><a href="/about">ABOUT</a></li>
+          <li class="active"><a href="/about">ABOUT</a></li>
           <li><a href="https://oyoclass.com/user/64f75393220be6d07bec267f">KIDOYO</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <section class="section-white">
-    <div class="container text-center">
-      <h1 class="section_title">About {{ data.name }}</h1>
-      <p class="lead">OYOclass Architect & Creative Developer</p>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-badge"><i class="fa fa-user" style="margin-right:6px;"></i>OYOclass Architect</div>
+      <h1 class="page-hero-title">About {{ data.name }}</h1>
+      <p class="page-hero-sub">OYOclass Architect &amp; Creative Developer — mentor, builder, and lifelong learner.</p>
     </div>
   </section>
 
@@ -75,6 +77,9 @@
         &nbsp;·&nbsp; &copy; 2026 OYOclass.com</p>
     </div>
   </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 
 </html>
