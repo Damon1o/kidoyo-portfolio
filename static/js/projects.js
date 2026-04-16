@@ -55,7 +55,7 @@ if (searchInput) {
     });
 }
 
-if (searchClear) {
+if (searchClear && searchInput) {
     searchClear.addEventListener('click', function () {
         searchInput.value = '';
         searchClear.style.display = 'none';
