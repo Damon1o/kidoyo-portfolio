@@ -254,6 +254,20 @@
       <p class="section-lead">Every artifact, game, and program built on OYOclass — organized by skill domain. Click any
         category to filter.</p>
 
+      <!-- SEARCH BAR -->
+      <div class="search-bar-wrap">
+        <div class="search-bar-inner">
+          <i class="fa fa-search search-bar-icon"></i>
+          <input type="text" id="projectSearch" class="search-bar-input" placeholder="Search projects by name or description…" autocomplete="off">
+          <button class="search-bar-clear" id="searchClear" aria-label="Clear search" style="display:none;">
+            <i class="fa fa-times"></i>
+          </button>
+        </div>
+        <div class="search-no-results" id="searchNoResults" style="display:none;">
+          <i class="fa fa-search" style="margin-right:8px;opacity:0.4;"></i>No projects match your search.
+        </div>
+      </div>
+
       <!-- FILTER TABS -->
       <div class="filter-tabs" id="filterTabs">
         <button class="filter-tab active" data-filter="all">All Projects <span class="tab-count"
